@@ -51,27 +51,6 @@ public class Principal extends javax.swing.JFrame {
     add(ejecutar);
     add(escenario);
     add(personaje);
-    /*initComponents();
-        
-    setTitle("Programathon");
-    setSize(1024, 700);
-    setLocationRelativeTo(null);
-    setDefaultCloseOperation(EXIT_ON_CLOSE);
-    setVisible(true);
-   // setLayout(new BorderLayout());
-   // setContentPane(new JLabel(new ImageIcon("C:\\Users\\PC\\Desktop\\Programathon\\programathon\\Programathon\\src\\Principal\\Escenarios\\ciudad.png")));
-  //  setLayout(new FlowLayout());
-  
-    nuevo.setText("Nuevo proyecto");
-    nuevo.setBounds(0, 0, 50, 50);
-
-   // getContentPane().add(nuevo);
-   
-// getContentPane().add(nuevo, java.awt.BorderLayout.PAGE_END);
-    
-    add(nuevo);
-    nuevo.setVisible(true);
-    */
     }
 
     @SuppressWarnings("unchecked")
@@ -95,12 +74,7 @@ public class Principal extends javax.swing.JFrame {
     {
     }
     }
-    
-    public void cargarbotones()
-    {
-    
-    }
-    
+ 
     /**
      * @param args the command line arguments
      */
