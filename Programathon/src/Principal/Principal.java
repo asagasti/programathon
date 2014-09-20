@@ -33,17 +33,17 @@ public class Principal extends javax.swing.JFrame {
    // setContentPane(new JLabel(new ImageIcon("C:\\Users\\PC\\Desktop\\Programathon\\programathon\\Programathon\\src\\Principal\\Escenarios\\ciudad.png")));
     
     changeImage(nuevo, "Simbolos/nuevo.png");
-    nuevo.setBounds(20,20,160, 200);
+    nuevo.setBounds(80,20,140, 180);
     changeImage(guardar, "Simbolos/guardar.png");
-    guardar.setBounds(200,20,160,200);
+    guardar.setBounds(220,20,140, 180);
     changeImage(abrir, "Simbolos/abrir_proyecto.png");
-    abrir.setBounds(380,20,160,200);
+    abrir.setBounds(360,20,140, 180);
     changeImage(ejecutar, "Simbolos/reproducir.png");
-    ejecutar.setBounds(560, 20, 160, 200);
+    ejecutar.setBounds(500, 20, 140, 180);
     changeImage(escenario, "Simbolos/agregar-cambiar escenario.png");
-    escenario.setBounds(740, 20, 160, 200);
+    escenario.setBounds(640, 20, 140, 180);
     changeImage(personaje, "Simbolos/agregar personaje.png");
-    personaje.setBounds(920, 20, 160, 200);
+    personaje.setBounds(780, 20, 140, 180);
     
     add(nuevo);   
     add(guardar);
@@ -68,8 +68,8 @@ public class Principal extends javax.swing.JFrame {
     {
         try{
     Image img = ImageIO.read(getClass().getResource(image));
-    
-    n.setIcon(new ImageIcon(img));
+
+    n.setIcon(new ImageIcon(img.getScaledInstance(100, 130, 1)));
     }catch(IOException ex)
     {
     }
