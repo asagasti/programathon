@@ -9,8 +9,10 @@ package Principal;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.FileInputStream;
 import javax.imageio.ImageIO;
 import java.io.IOException;
+import java.util.Properties;
 
 public class Principal extends javax.swing.JFrame {
     
@@ -20,7 +22,8 @@ public class Principal extends javax.swing.JFrame {
     JButton ejecutar = new JButton();
     JButton escenario = new JButton();
     JButton personaje= new JButton();
-    
+    public static Properties property= new Properties();
+     
     public Principal() {
     
     super ("Programathon");
@@ -29,6 +32,10 @@ public class Principal extends javax.swing.JFrame {
      setSize(1024,700);
      setLayout(null);
      
+    System.out.println(getProperty("red"));
+    //Color color = new Color(Integer.parseInt(getProperty("red")),Integer.parseInt(getProperty("green")),Integer.parseInt(getProperty("blue")));
+     
+     //getContentPane().setBackground(color);
     //Imagen de fondo
    // setContentPane(new JLabel(new ImageIcon("C:\\Users\\PC\\Desktop\\Programathon\\programathon\\Programathon\\src\\Principal\\Escenarios\\ciudad.png")));
     
@@ -74,6 +81,21 @@ public class Principal extends javax.swing.JFrame {
     {
     }
     }
+    
+    public String getProperty(String name)
+    {
+        String value="";
+        try{
+            property.load(new FileInputStream("config.properties"));
+            value=property.getProperty(name);
+            
+        }
+        catch(IOException ex)
+        {
+        }
+    return value;
+    }
+    
  
     /**
      * @param args the command line arguments
